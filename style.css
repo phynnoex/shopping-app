@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    
+}
+.main-nav{
+    background-color: #f3ddc9;
+    height: 10px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 80px 25px 80px;
+    
+}
+.nav-header{
+    font: 26px;
+    font-weight: bold;
+}
+li{
+    list-style-type: none;
+    display: flex;
+}
+.hero{
+    height: 500px;
+    background-color: #f1e6db;
+    padding: 80px; 
+    display: flex;
+}
+
+.hero h1{
+    padding-top: 50px;
+    font-size: 60px;
+    color: #a8583f;
+}
+.hero p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.hero-values button{
+    height: 40px;
+    width: 150px;
+    background-color: #a8583f;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px black;
+
+}
+.hero-values button:hover{
+    height: 50px;
+    width: 160px;
+    transition: 100ms;
+    box-shadow: 2px 2px 3px black;
+}
+.hero-img{
+    padding-left: 100px;
+}
+.hero-img-real{
+    width: 500px
+}
+.main{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.selection{
+    padding-left: 30px;
+    padding-top: 20px;
+    height: 70px;
+}
+.selection-row{
+    display: flex;
+    justify-content: space-between;
+
+}
+.country-select{
+    width: 70px;
+    height: 30px;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+}
+.card{
+    height: 300px;
+    background-color: #f1e6db;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+
+}
+.card-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f3ddc9;
+    padding: 10px;
+}
+.card-details h3{
+    font-weight: bold;
+}
+.cart-details h3{
+    font-size: 20px;
+}
+.card-details h4{
+    font-weight: lighter;
+    font-size: 10px;
+}
+.card-img{
+    flex-grow: 3;
+    padding: 20px;
+}
+.card-ID{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+
+.cart-section{
+    background-color: #a8583f;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    min-height: 50vh;
+}
+.cart-details{
+    height: 8vh;
+    background-color: #f1e6db;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.cart-details h3{
+    font-weight: 100;
+}
+.right-cart-content{
+    display: flex;
+    justify-content: space-around;
+}
+.right-cart-content div{
+    margin-right: 20px;
+}
+.cart h2{
+    text-align: center;
+    margin: 30px;
+    width: 100%;
+    font-size: 2em; 
+}
+
+.cart-summary{
+    height: 15vh;
+    background-color: #f3ddc9;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px black;
+}
+.summary{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    
+}
+.cart-summary h3{
+    font-weight: 100;
+}
+.summary-text{
+    background-color: #a8583f;
+    padding: 7px;
+    color: white;
+    width: 90px;
+    font-weight: bold;
+    font-size: 22px;
+    font-style: italic;
+}
+.review-section h2{
+    text-align: center;
+    margin: 30px;
+    width: 100%;
+    font-size: 2em; 
+}
+.review-section{
+    padding: 60px;
+    height: 70vh;
+}
+.review{
+    background-color:#f3ddc9;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.review-form input{
+    width: 100%;
+    border: none;
+    background-color: white;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.review-form textarea{
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cart-modal{
+    display: none; 
+    padding: 60px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0; 
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+    height: 80vh;
+    
+}
+.modal-content{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    height: 80vh;
+
+}
+.product-image{
+    background-color:#f1e6db;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+
+}
+.product-details{
+    padding: 30px;
+    background-color: #f3ddc9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.product-details h3{
+    font-size: 30px;
+}
+.product-details .price-tag{
+    margin-top: 60px;
+}
+.product-description{
+    margin-bottom: 40px;
+}
+.rating{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.rating .fa-star{
+    color: rgb(0, 0, 0,0.1);
+}
+
+.add-to-cart{
+    margin-bottom: 20px;
+}
+.display-comment{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.profile{
+    background-color: #f3ddc9;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close-button
+{
+    height: 50px;
+    width: 50px;
+    background-color: #a8583f;
+    border-radius: 50%;
+
+}
+.close{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+/* Custom styling for select dropdown */
+.mySelect {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Style for dropdown arrow */
+  .mySelect::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  /* Style for option hover */
+  option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for selected option */
+  option:checked {
+    background-color: #e0e0e0;
+  }
+  

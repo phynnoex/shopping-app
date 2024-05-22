@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-nav">
+        <div class="nav-header">
+            <h3>Phoenix stores</h3>
+        </div>
+        <div>
+            <li>
+                <ul><a href="#cart-section">Cart</a></ul>
+                <ul><a href="#review-section">Review</a></ul>
+            </li>
+        </div>
+    </div>
+    <section >
+        <div  style="padding: 10px 60px; display: flex;justify-content: end; background-color: #f1e6db;">
+            <p id="dateTime"></p>
+        </div>
+        <div class="hero">
+            <div class="hero-values">
+                <h1>SHOP QUALITY<br> AND AFFORDABLE<br> SHOES</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur<br> 
+                    adipiscing elit, sed do eiusmod<br> 
+                    tempor incididunt ut l<br> </p>
+                <button>view shop</button>
+            </div>
+            <div  class="hero-img">
+                <img src="./images/1 (3).jpg" alt="man holding shoes" class="hero-img-real">
+            </div>
+        </div>
+    </section>
+    <section class="selection">
+        <div class="selection-row">
+            <select class="mySelect" id="currency" onchange="currencyConverter()">
+                <option value="america" selected>USD</option>
+                <option value="canada">CAD</option>
+                <option value="nigeria">NGR</option>
+            </select>
+            <div></div>
+            <select class="mySelect" id="category" onchange="categorySorter()">
+                
+                <option value="all">All</option>
+                <option value="trainers">trainers</option>
+                <option value="officeShoe">Office shoe</option>
+                <option value="crocs">Crocs</option>
+            </select>
+        </div>
+    </section>
+    <section >        
+        <div class="main" id="cardID">
+        </div>
+    </section>
+    <section class="review-section" id="cart-section">
+        <h2>Cart Details</h2>
+        <div class="review">
+            
+            <div class="review-form">
+                <form action="">
+                    <div id="IdValidate" style="font-size: 20px; color: red;"></div>
+                    <input type="text" id="cartProductID" placeholder="Product ID">
+                    <div id="quantityValidate" style="font-size: 20px; color: red;"></div>
+                    <input type="number" id="cartQuantity" placeholder="Quantity">
+                </form>
+                <input type="submit" id="addItemBTN" style="height: 60px; color: white; background-color: #a8583f;" value="Add Item" onclick="addToCart()">
+                <div>
+                    <button onclick="showDetails()">Item details</button>
+                    <button onclick="removeItems()"> Remove Item</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cart-section" >
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cartDetails"></div>
+            <!-- <div class="cart-details" > -->
+                <!-- <h3><span style="font-weight: bold;">1. Birds of Paradise</span></h3>
+                <div class="right-cart-content">
+                    <div>
+                        <h3><span style="font-weight: bold;">price:</span> $29.99</h3>
+                        <h3><span style="font-weight: bold;">subtotal:</span> $10.99</h3>
+                    </div>
+                    <div>
+                        <h3><span style="font-weight: bold;">Quantity:</span> 3</h3>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <div class="cart-summary">
+                <h3 class="summary-text" id="summary">Summary </span></h3>
+                <div class="summary">
+                    <div>
+                        <h3 id="subtotalSM"><span style="font-weight: bold;">Item Subtotal:</span> $00.00</h3>
+                        <h3 id="shippingSM"><span style="font-weight: bold;">Estimated Shipping:</span> $00.00</h3>
+                    </div>
+                    <div>
+                        <h3 id="overallSubtotal"><span style="font-weight: bold;">Subtotal: </span>$00.00</h3>
+                        <h3 id="taxSM"><span style="font-weight: bold;">Estimated Tax:</span> $00.00</h3>
+                        <h3 id="subTotalTotal"><span style="font-weight: bold;" >Order Tool:</span> $00.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review-section" id="review-section">
+        <h2>Review</h2>
+        <div class="review">
+            
+            <div class="review-form">
+                <form action="">
+                    <div id="reviewIdValidate" style="font-size: 20px; color: red;"></div>
+                    <input type="text" id="productIDD" placeholder="Product ID">
+                    <textarea name="" id="productDescription" cols="30" rows="10" placeholder="what can we do to improve our process"></textarea>
+                    <input type="number" id="rateNUM" placeholder="rate out of 5">
+                </form>
+                <input type="submit" id="submitBTN" style="height: 60px; color: white; background-color: #a8583f;" onclick="reviewDetails()">
+            </div>
+        </div>
+    </section>
+    <section class="cart-modal" id="class-Modal">
+        <div class="close">
+            <button class="close-button" onclick="closeModal()">x</button>
+        </div>
+        <div class="modal-content">
+            <div class="product-image">
+                <img src="./images/balenciaga.png" alt="" style="margin-top: 100px;">
+            </div>
+            <div class="product-details">
+                <h3 id="ModalproductName">Lorem Ipsum Dolor</h3>
+                <p id="productSubTitle">Incididunt ut labore et dolore</p>
+
+                <h3 class="price-tag" id="priceTag">$29.99</h3>
+                <p class="product-description">Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor<br>
+                    incididunt ut labore et dolore magna 
+                    aliqua. Ut enim ad minim veniam, quis <br>
+                    nostrud exercitation ullamco laboris</p>
+                
+                <p><span style="color: orange;">+shipping</span> from London</p>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+                <h4 style="margin-bottom: 10px;">Reviews</h4>
+                <div class="commentHouse">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/73f08afdf2.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
